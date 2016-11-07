@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<!-- 设置系统属性 -->
+	<constant name="struts.devMode" value="true"/>
+	<constant name="struts.ui.theme" value="simple"/> 
+	
+	<package name="com.stu" extends="struts-default">
+		<action name="ActionStu_*" method="{1}" class="com.stu.web.AllStuInfo">
+			 <!-- type="redirect" -->
+			 <result name="welecome" >/welecpme.jsp</result> 
+		</action>
+	
+	
+		<!-- 班级 -->
+		<action name="actionClass_*" method="{1}" class="com.stu.web.AllClass">
+			<result name="classList">/pages/allClass.jsp</result>
+			<result name="updataClass">/pages/upClass.jsp</result>
+		</action>
+		
+	</package>
+
+</struts>
